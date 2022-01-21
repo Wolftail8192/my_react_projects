@@ -1,0 +1,13 @@
+.header{
+    min-width: 70px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.header a{
+    font-size: 30px;
+    color: red;
+    text-decoration: none;
+}
