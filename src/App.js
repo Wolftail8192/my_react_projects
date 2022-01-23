@@ -2,7 +2,7 @@ import React from 'react';
 
 import axios from "axios"
 
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, Link} from "react-rouLinker-dom";
 
 import css from "./App.module.css"
 import Users from "./pages/Users/Users"
@@ -13,8 +13,8 @@ const App = () => {
     return (
         <div>
           <div className={css.header}>
-              <a href="/users"> Users</a>
-              <a href="/posts"> Posts</a>
+              <Link to ="/users"> Users</Link>
+              <Link to ="/posts"> Posts</Link>
 
           </div>
             <Routes>
