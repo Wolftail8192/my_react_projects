@@ -11,3 +11,7 @@
     color: red;
     text-decoration: none;
 }
+.header [class='active'] {
+    text-decoration: underline;
+    color: green;
+}

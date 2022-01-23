@@ -1,8 +1,10 @@
 import React from 'react';
 
+import {Link, NavLink, Outlet} from "react-router-dom";
+
 import css from "./Layout.module.css"
 
-import {Link, Outlet} from "react-router-dom";
+
 
 
 
@@ -12,8 +14,8 @@ const Layout = () => {
         <>
 
             <div className={css.header}>
-                <Link to ="/users"> Users</Link>
-                <Link to ="/posts"> Posts</Link>
+                <NavLink to ="/users"> Users</NavLink>
+                <NavLink to ="/posts"> Posts</NavLink>
 
             </div>
 
