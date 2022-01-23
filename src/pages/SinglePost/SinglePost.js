@@ -1,11 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+
+import {useLocation, useParams} from "react-router-dom";
+
 import {postService} from "../../services/post.service";
 
 const SinglePost = () => {
     const {id} = useParams();
     const [post, setPost] = useState(null);
+    const {state} = useLocation();
     useEffect(()=>{
+        if (state){
+            setPost(state)
+            return
+        }
         postService.getById(id).then(value => setPost({...value}))
     },[])
 
