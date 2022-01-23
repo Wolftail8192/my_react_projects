@@ -2,25 +2,27 @@ import React from 'react';
 
 import axios from "axios"
 
-import {Routes, Route, Link} from "react-rouLinker-dom";
+import {Routes, Route, Link} from "react-router-dom";
 
-import css from "./App.module.css"
+
 import Users from "./pages/Users/Users"
 import Posts from "./pages/Posts/Posts"
 import NotFound from "./pages/NotFound/NotFound"
+import Layout from "./Components/Layout/Layout";
 
 const App = () => {
     return (
         <div>
-          <div className={css.header}>
-              <Link to ="/users"> Users</Link>
-              <Link to ="/posts"> Posts</Link>
 
-          </div>
             <Routes>
-                <Route path={'/users'} element={<Users/>}/>
-                <Route path={'/posts'} element={<Posts/>}/>
-                <Route path={'*'} element={<NotFound/>}/>
+                <Route path={'/'} element={<Layout/>}>
+
+                    <Route path={'/users'} element={<Users/>}/>
+                    <Route path={'/posts'} element={<Posts/>}/>
+                    <Route path={'*'} element={<NotFound/>}/>
+
+                </Route>
+
 
             </Routes>
         </div>
