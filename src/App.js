@@ -3,7 +3,7 @@ import React from 'react';
 import axios from "axios"
 
 import {Routes, Route, Link} from "react-router-dom";
-
+import SinglePost from "./pages/SinglePost/SinglePost";
 
 import Users from "./pages/Users/Users"
 import Posts from "./pages/Posts/Posts"
@@ -19,6 +19,7 @@ const App = () => {
 
                     <Route path={'/users'} element={<Users/>}/>
                     <Route path={'/posts'} element={<Posts/>}/>
+                    <Route path={'/posts/:id'} element={<SinglePost/>}/>
                     <Route path={'*'} element={<NotFound/>}/>
 
                 </Route>
