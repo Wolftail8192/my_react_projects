@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+
+
+import {Outlet} from "react-router-dom";
 import {postService} from "../../services/post.service";
-import post from "../../Components/post/post";
+
 import Post from "../../Components/post/post";
 
 
@@ -16,6 +18,7 @@ const Posts = () => {
         <div>
             <h1>Posts</h1>
             {posts.map(post => <Post key={post.id} post={post}/>)}
+            <div> <Outlet/> </div>
         </div>
     );
 };
