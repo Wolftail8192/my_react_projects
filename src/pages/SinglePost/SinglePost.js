@@ -33,12 +33,17 @@ const SinglePost = () => {
         <div>
             {post && (
                 <div>
-                    <div>Id: {post.id}</div>
-                    <div>UserId: {post.userId}</div>
-                    <div>Title: {post.title}</div>
-                    <div>Body:{post.body}</div>
-                    <button onClick={PostsDetails}>PostsDetails</button>
+                    <div>
+                        <div>Id: {post.id}</div>
+                        <div>UserId: {post.userId}</div>
+                        <div>Title: {post.title}</div>
+                        <div>Body:{post.body}</div>
+                        <button onClick={PostsDetails}>PostsDetails</button>
+                    </div>
+                    <div> Comments</div>
                 </div>
+
+
             )}
         </div>
     );
