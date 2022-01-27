@@ -9,18 +9,23 @@ import Users from "./pages/Users/Users"
 import Posts from "./pages/Posts/Posts"
 import NotFound from "./pages/NotFound/NotFound"
 import Layout from "./Components/Layout/Layout";
+import SingleUser from "./pages/SinglUser/SinglUser";
 
 const App = () => {
     return (
-        <div>
+        <div className='mainBox'>
 
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
 
-                    <Route path={'/users'} element={<Users/>}/>
-                    <Route path={'/posts'} element={<Posts/>}>
-                        <Route path={':id'} element={<SinglePost/>}/>
-                    </Route>
+
+                        <Route path={'users'} element={<Users/>}>
+                            <Route path={':id'} element={<SingleUser/>}/>
+                        </Route>
+                        <Route path={'posts'} element={<Posts/>}>
+                            <Route path={':id'} element={<SinglePost/>}/>
+                        </Route>
+
 
                     <Route path={'*'} element={<NotFound/>}/>
 

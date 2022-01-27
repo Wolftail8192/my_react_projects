@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import {useLocation, useParams} from "react-router-dom";
 
-import {userService} from "../../services/post.service";
+import {userService} from "../../services/user.service";
 
 const SingleUser = () => {
     const {id} = useParams();
@@ -23,7 +23,7 @@ const SingleUser = () => {
         }
         userService.getById(id).then(value => setUser({...value}))
     },[]);
-    const UserDetails = () => {
+    const UsersDetails = () => {
         navigate ('/users')
     }
 
