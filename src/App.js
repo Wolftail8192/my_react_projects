@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {Cars, Form} from  "./Components"
+import {Cars} from  './Components/Cars/Cars'
+import {Form} from './Components/Form/Form'
 
 function App  ()  {
     const [cars, setCars] = useState([]);
