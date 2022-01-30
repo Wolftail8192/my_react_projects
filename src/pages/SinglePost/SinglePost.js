@@ -4,6 +4,8 @@ import {useLocation, useParams} from "react-router-dom";
 
 import {postService} from "../../services/post.service";
 
+import {useNavigate} from "react-router-dom";
+
 const SinglePost = () => {
     const {id} = useParams();
     const [post, setPost] = useState(null);
