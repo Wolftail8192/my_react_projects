@@ -14,8 +14,8 @@ function App  ()  {
 
     return (
         <div>
-            <Form getFormData={getFormData()}/>
-            <Cars cars={cars} getCarId={getCarId()}/>
+            <Form getFormData={getFormData}/>
+            <Cars cars={cars} getCarId={getCarId}/>
 
         </div>
     );
