@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Cars} from  './Components/Cars/Cars'
-import {Form} from './Components/Form/Form'
+import {Cars, Form} from  './Components'
+
 
 function App  ()  {
     const [cars, setCars] = useState([]);
@@ -10,7 +10,7 @@ function App  ()  {
 
     }
     const getCarId = (id) => {
-        setCars(cars.filter(car => car.id === id))
+        setCars(cars.filter(car => car.id !== id))
 
     }
 
