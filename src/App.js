@@ -5,10 +5,7 @@ import {Cars, Form} from  './Components'
 function App  ()  {
     const [cars, setCars] = useState([]);
 
-    const getFormData = (data) => {
-        setCars([...cars, {id: new Date().getTime(), ...data}])
 
-    }
     const getCarId = (id) => {
         setCars(cars.filter(car => car.id !== id))
 
