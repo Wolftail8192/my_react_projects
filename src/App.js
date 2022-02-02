@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Cars, Form} from  './Components'
 
- 
+
 function App  ()  {
     const [cars, setCars] = useState([]);
 
@@ -16,8 +16,9 @@ function App  ()  {
 
     return (
         <div>
-            <Form getFormData={getFormData}/>
-            <Cars cars={cars} getCarId={getCarId}/>
+
+            <Form/>
+            <Cars getCarId={getCarId}/>
 
         </div>
     );
