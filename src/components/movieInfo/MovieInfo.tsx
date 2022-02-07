@@ -1,9 +1,14 @@
 import React, {FC} from 'react';
+import {IMovie} from "../../interfaces";
 
-const MovieInfo:FC = () => {
+interface IProps {
+    movie:IMovie
+}
+
+const MovieInfo:FC <IProps> = ({movie:IMovie}) => {
     return (
         <div>
-            
+            <div>{IMovie}</div>
         </div>
     );
 };
