@@ -8,7 +8,7 @@ interface IProps{
 const Movie: FC<IProps> = ({movie}) => {
     return (
         <div>
-            Movie
+            {Movie}
         </div>
     );
 };

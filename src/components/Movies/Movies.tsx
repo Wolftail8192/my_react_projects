@@ -3,6 +3,7 @@ import {IMovie} from "../../interfaces";
 import {movieService} from "../../services";
 import Movie from "../Movie/Movie";
 
+
 const Movies:FC = () => {
     const [movies,setMovies] = useState<IMovie[]>([]);
 
@@ -10,6 +11,7 @@ const Movies:FC = () => {
         const getAllMovies = async () => {
             const {data} = await movieService.getAll();
             setMovies(data);
+
 
         }
         getAllMovies();
